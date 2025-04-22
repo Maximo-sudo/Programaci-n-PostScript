@@ -20,12 +20,13 @@ newpath
 90 0 rlineto  
 0 90 rlineto
 -90 0 rlineto % - Para retroceder en este caso usamos un "-"
-0 -90 rlineto
-%closepath % - Su funcionalidad es cerar el camino automaticamente - volviendo a la posicion 10 - 10.
+% 0 -90 rlineto
+closepath % - Su funcionalidad es cerar el camino automaticamente - volviendo a la posicion 10 - 10.
     % - El cuadro resultante medira 90 x 90.
 5 setlinewidth % - Esto le estableze un grosor de 5 unidades.
     % Por defecto el valor es de 1.
-stroke % - Lo mismo que lo anterior.
+%stroke % - Lo mismo que lo anterior.
+0.5 setgray fill
 showpage %- Su funcion es renderizar la página.
     % Es solamente necesario en el caso de que quieras renderizar la pagina de postScript.
 %%EOF 
