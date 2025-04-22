@@ -1,0 +1,8 @@
+%!PS
+newpath % Con esto iniciamos un path. Borando cualquier cosa anterior y preparando el lienzo.
+1 1 moveto % El moveto mueve el cursor de dibujo de cordenadas sin trazar ninguna linea. En este caso se posiciona en la esquina inferior izquierda.
+91 1 lineto % Traza una linea de la posicion actual hasta las cordenadas 91 - 1. LA BASE DEL CUADRADO
+91 91 lineto % Y lo demas igual, EL LATERAL DERECHO
+1 91 lineto % LA BASE SUPERIOR
+1 1 lineto % EL LATERAL IZQUIERDO
+stroke %% Dibuja el cambio definitivo en el lienzo. Esto hace que lsa líneas del cuadrado sean visibles.
