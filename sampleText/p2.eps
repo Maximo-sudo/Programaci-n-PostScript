@@ -1,0 +1,36 @@
+%!PS-Adobe-3.0 EPSF-3.0 
+    % --> Este es un archivo EPS - Encapsulated PostCript
+    % - Es compatible con la version que se menciona y lo hace para incrustar en documentos como PDFs.
+    % - Pero en resumidas cuentas especifica la versión.
+% --> Las tres siguientes lineas que empiezan "%%", definen la estructura del documento.
+%%BoundingBox: 5 5 105 105
+    % - Sirve para definir un area de 100x100 unidades.
+    % - Desplazando 5 unidades desde el origen.
+    % - Estp es crítico para archivos EPS, ya que indica dónde se ubica el gráfico.
+        % - 5 - 5 Posicion del borde inferior izquierdo.
+        % - 105 - 105 Posición del borde superior derecho.
+%%BeginProlog
+    % - Esto marca el inicio del prologo.
+%%EndProlog
+    % - Esto marca el final del prologo
+     % - Apartir de aqui no varia mucho la funcionalidad el tema de las corrdenadas y método de dibujo.
+     % - Solo la forma de escribirlo.
+newpath
+10 10 moveto  % - El punto inicial
+90 0 rlineto  
+0 90 rlineto
+-90 0 rlineto % - Para retroceder en este caso usamos un "-"
+% 0 -90 rlineto
+closepath % - Su funcionalidad es cerar el camino automaticamente - volviendo a la posicion 10 - 10.
+    % - El cuadro resultante medira 90 x 90.
+5 setlinewidth % - Esto le estableze un grosor de 5 unidades.
+    % Por defecto el valor es de 1.
+%stroke % - Lo mismo que lo anterior.
+0.5 setgray fill
+showpage %- Su funcion es renderizar la página.
+    % Es solamente necesario en el caso de que quieras renderizar la pagina de postScript.
+%%EOF 
+    % - Esto es algo obligatorio para los archivos EPS para marcar que es el final del contenido.
+
+
+% El r de rlineto --> Es de Relative Lineto

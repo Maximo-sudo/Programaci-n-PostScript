@@ -1,0 +1,38 @@
+% Documento basico de LaTeX el cual sirve como insertar una figura.
+\documentclass{article} % Esto establece el formato general del documento(Tamaño de la pagina, margenes, estilo de las secciones, ...).
+                        % Hay varios tipos de clases de documentos.
+                            % - Clase article: Para articulos cortos, informes y documentos generales.
+                            % - Clase report: Documentos largos(Informes tecnicos o tesis).
+                            % - Clase book: Libros con soporte para capitulos, secciones y mas.
+                            % - Clase letter: Para escribir cartas.
+                            % - Clase beamer: Presentaciones de tipo diapositivas.
+                        % Opciones adicionales(El documento se puede personalizar mas añadiendo opciones dentro de corchetes):
+                            % Tamaño de la fuente: 10pt...
+                            % Formato del papel: a4paper, letterpaper, etc.
+                            % Formato de columnass: twocolumn para dividir el texto en dos columnas.
+                        % Y por ultimo estan las clases personalizadas las cuales ya hare mas adelante.
+
+\usepackage{graphicx} % Esto sirve para incluir el paquete graphicx, el cual es una extension para manejar grádicos.
+                      % Permite insertar imagenes, ajustar su tamaño, rotarlas, recortarlas y realizar otras manipulaciones.
+                        % Al incluir \usepackage{graphicx} antes que el \begin{document}.
+                        % Estas habilitando un conjunto de comandos que facilitan el trabajo con graficos.
+                        % El más cómun es \includegraphics, el cual se usa para insertar imágenes en el documento.
+
+                        % Opciones de \includegraphics:
+                            % width=<dimensión>: Ancho de la imagen.
+                            % height=<dimensión>: Altura de la imagen.
+                            % scale=<factor>: Escala la imagen por un factor (por ejemplo, scale=0.5 reduce la imagen al 50%).
+                            % angle=<grados>: Rota la imagen en el ángulo especificado.
+                            % trim=<izquierda> <abajo> <derecha> <arriba>: Recorta la imagen en las direcciones especificadas.
+                            % clip: Se usa junto con trim para aplicar el recorte.
+\begin{document} % El begin y end delimitan el contenido principal del documento.
+Figure~\ref{fig:square} is an example of a picture in a \LaTeX\ text. % Esto crea una referencia cruzada a la figura etiquetada como "squaer".
+    % Y desde aqui se delimita el entorno de la etiqueta "figure".
+\begin{figure}[hbt] % Opciones de posicionamiento (here, bottom, top)
+    \begin{center} % Centra la imagen
+        \includegraphics{p2.eps} % Inserta la imajen llamada p2.eps
+        \caption{A square.} % Añade un pie de foto
+        \label{fig:square} % Etiqueta la figura para preferencias cruzadas.
+    \end{center}
+\end{figure}
+\end{document}
