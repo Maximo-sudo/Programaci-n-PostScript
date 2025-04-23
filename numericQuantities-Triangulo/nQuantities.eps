@@ -1,0 +1,30 @@
+%! PS-Adobe-3.0 EPSF--3.0
+%%BoundingBox: -2 -2 59 52
+%%BeginProlog
+% define and assign the scale
+% note: 1cm = 28.34645 points.
+    %   1 inch = 72 points.
+/s 28.34645 def % Para declarar una variable en post script se usa /.
+                % Acompañado del parametro def, el cual toma el valor y el nombe de la variable y lo guarda en el diccionario actucal.
+%%EndProlog
+s s scale % El s s quiere decir 1 1 porque estamos llamando a la variable s previamente definida. 
+          % Las operaciones en postScript se realizan en una pila - un tipo de lenguake.
+          % El operador scale, ajusta la escala del sistema de cordenadas actual, tomando los valores de la pila(En este caso las dos s).
+          % La primera s = x. La segunda s = y. Por lo que si la s = 2 se duplica el tamaño. Pero si la s = 0.5 se divide.
+1 s div setlinewidth % Esto se compone de dos partes. 1º 1 s div y 2º setlinewidth.
+                     % En resumidas cuenta el operador div establece o se refiere a una división.
+                     % Y la operacion es dividir 1 / s.
+                     % Y tras añadir el operador setlinewidth, estamos haciendo que el resultado de la operación sea el grosor de las lineas que se dibujarán.
+newpath
+0 0 moveto
+2 0 rlineto
+-1 3 sqrt rlineto % Lo diferente que tiene esta en comparación con el resto es el "sqrt".
+                  % Su función es calcular la raizcuadrada de un numero.
+                  % En este caso la calcula del numero del eje de cordenadas "y".
+                  % Y ya tras ello dibuja la linea del -1 a la raiz cuadrada.
+closepath
+stroke
+showpage
+%%EOF
+
+

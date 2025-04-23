@@ -1,0 +1,9 @@
+1º Creación del archivo base .tex
+2º Compilar el latext file:
+    Lo que es lo mismo generar los 3 archivos.
+    --> latex ARCHIVO.tex
+3º Convertir DVI to PostScript
+    --> dvips sample.dvi -o sample.ps
+4º Previsualizar Archivo PS (OPCIONAL)
+5º Convertir PS a PDF
+    --> ps2pdf sample.ps
