@@ -6,7 +6,10 @@
 
 %%BoundingBox: 10 10 510 110
 %%BeginProlog
+/inch {72 mul} def
+% /s 72 def
 %%EndProlog
+
 
 newpath
 30 610 moveto
@@ -15,5 +18,21 @@ newpath
 -500 0 rlineto
 closepath
 0.5 setgray fill
+
+newpath
+80 650 moveto
+4 inch 0 rlineto
+0 20 rlineto
+-4 inch 0 rlineto
+closepath
+1 0 0 setrgbcolor fill
+
+newpath
+% 1p = 72 - 72*4 = 288
+80 4 inch add 618 moveto % puntoDerecha
+72 40 rlineto
+-72 40 rlineto
+closepath
+1 0 0 setrgbcolor fill
 showpage
 %%EOF   
